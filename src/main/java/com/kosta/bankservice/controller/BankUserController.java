@@ -20,8 +20,8 @@ public class BankUserController {
         return BankUserInfoResponse.builder()
                 .name("임태빈")
                 .email(request.getEmail())
-                .phone(request.getPhone())
-                .ci(ci)
+                .phoneNum(request.getPhone())
+                .memberCi(ci)
                 .bankAccount("110-1111-2222")
                 .build();
     }
