@@ -10,15 +10,15 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "bankapi")
 @Getter
-@Setter             // ― Lombok: 필드용 getter/setter 자동 생성
-@NoArgsConstructor          // ― 기본 생성자
-@AllArgsConstructor         // ― 모든 필드 생성자
-@Builder                    // ― 빌더 패턴
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class BankApi {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)   // ― AUTO_INCREMENT 매핑
-    private Long id;                                      // PK
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "balance_amt", nullable = false, length = 50)
     private BigDecimal balanceAmt;    // 잔액 (VARCHAR → BigDecimal 매핑 권장)
